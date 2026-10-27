@@ -103,7 +103,7 @@ p { margin: 1em 0; }
 .theme-picker svg { display: block; width: 18px; height: 18px; }
 .archive-notice { padding: 7px 24px; background: var(--wash); color: var(--muted); font-size: .74rem; text-align: center; }
 .archive-notice a { margin-left: 8px; color: inherit; }
-.layout { display: grid; grid-template-columns: 270px minmax(0, 860px) 200px; max-width: 1440px; margin: auto; align-items: start; }
+.layout { display: grid; grid-template-columns: 270px minmax(0, 1160px) 200px; max-width: 1740px; margin: auto; align-items: start; }
 .layout-index { display: block; max-width: 1000px; }
 .layout-index .page-toc { display: none; }
 .sidebar { position: sticky; top: var(--header); max-height: calc(100vh - var(--header)); overflow: auto; padding: 24px 14px 36px 18px; border-right: 1px solid var(--line); scrollbar-width: thin; font-size: .82rem; }
