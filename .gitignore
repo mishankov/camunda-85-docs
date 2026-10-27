@@ -1,0 +1,9 @@
+.venv/
+.cache/
+node_modules/
+test-results/
+__pycache__/
+.DS_Store
+.env
+.env.*
+!.env.example

@@ -1,0 +1,113 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Offline archive of the Camunda 8.5 documentation. Get started with microservice orchestration">
+<title>Get started with microservice orchestration · Camunda 8.5 archive</title><script src="../../../assets/theme.js"></script><link rel="stylesheet" href="../../../assets/site.css">
+<script defer src="../../../assets/site.js" data-root="../../../"></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="../../../index.html">Camunda <strong>8.5</strong></a>
+<nav class="primary-nav" aria-label="Documentation sections"><a href="../index.html" aria-current="location">Guides</a><a href="../../components/index.html">Using Camunda 8</a><a href="../../self-managed/about-self-managed/index.html">Self-Managed</a><a href="../../apis-tools/working-with-apis-tools/index.html">APIs &amp; tools</a><a href="../../reference/index.html">Reference</a><a href="../../tags/index.html">Topics</a></nav>
+<div class="header-tools"><button class="search-button" type="button" aria-haspopup="dialog" aria-controls="search-dialog" aria-keyshortcuts="Meta+K Control+K /" title="Search documentation (⌘K / Ctrl+K or /)"><span>Search documentation</span><kbd class="search-shortcut">⌘ K</kbd></button>
+<div id="theme-choice" class="theme-picker" role="group" aria-label="Color theme" aria-keyshortcuts="Shift+D" title="Color theme (Shift+D)">
+<button type="button" data-theme-choice="system" aria-label="System theme" title="System theme (Shift+D to cycle)" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></button>
+<button type="button" data-theme-choice="light" aria-label="Light theme" title="Light theme (Shift+D to cycle)" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+<button type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark theme (Shift+D to cycle)" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5 8.5 8.5 0 1 0 20.5 13.2Z"/></svg></button>
+</div></div></header>
+<div class="archive-notice">Archived documentation · Version 8.5 is no longer maintained. <a href="https://docs.camunda.io/">Current Camunda docs ↗</a></div>
+<div class="layout"><aside class="sidebar" aria-label="Documentation"><details class="section-menu" open><summary title="Expand or collapse contents (Enter / Space)">Guides <span>Contents</span></summary><nav aria-label="Guides"><details class="nav-group" open><summary title="Expand or collapse (Enter / Space)">Get started</summary><div><a href="../index.html">Get started with Camunda 8</a><a href="../getting-started/index.html">Create an account</a><a href="../model-your-first-process/index.html">Model your first process</a><a href="../orchestrate-human-tasks/index.html">Getting started with human task orchestration</a><a href="../orchestrate-apis/index.html">Getting started with API orchestration</a><a href="index.html" aria-current="page">Getting started with microservice orchestration</a><a href="../getting-started-java-spring/index.html">Getting started as a Java developer using Spring</a></div></details><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Design</summary><div><a href="../automating-a-process-using-bpmn/index.html">Design a process using BPMN</a><a href="../create-decision-tables-using-dmn/index.html">Create decision tables using DMN</a><a href="../utilizing-forms/index.html">Build forms with Modeler</a></div></details><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Automate</summary><div><a href="../create-cluster/index.html">Create your cluster</a><a href="../setting-up-development-project/index.html">Set up your first development project</a><a href="../setup-client-connection-credentials/index.html">Set up client connection credentials</a><a href="../configuring-out-of-the-box-connectors/index.html">Configure an out-of-the-box Connector</a><a href="../use-connectors-in-hybrid-mode/index.html">Use Connectors in hybrid mode</a><a href="../host-custom-connectors/index.html">Host custom Connectors</a></div></details><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Improve</summary><div><a href="../improve-processes-with-optimize/index.html">Improve processes with Optimize</a><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">DevOps lifecycle</summary><div><a href="../devops-lifecycle/integrate-web-modeler-in-ci-cd/index.html">Integrate Web Modeler into CI/CD</a></div></details></div></details><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Migrate from Camunda 7</summary><div><a href="../migrating-from-camunda-7/index.html">Pre-migration details</a><a href="../migrating-from-camunda-7/conceptual-differences/index.html">Conceptual differences</a><a href="../migrating-from-camunda-7/migration-readiness/index.html">Migration preparation</a><a href="../migrating-from-camunda-7/adjusting-bpmn-models/index.html">Adjust BPMN models</a><a href="../migrating-from-camunda-7/adjusting-dmn-models/index.html">Adjust DMN models</a><a href="../migrating-from-camunda-7/adjusting-source-code/index.html">Adjust source code</a></div></details><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Additional pages</summary><div><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Examples</summary><div><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Embedded examples</summary><div><a href="../assets/react-components/create-cluster/index.html">create-cluster</a></div></details></div></details></div></details></nav></details></aside>
+<main id="main" tabindex="-1"><div class="article-meta"><span>Guides / 8.5</span><a class="original-link" href="https://unsupported.docs.camunda.io/8.5/docs/guides/orchestrate-microservices/" target="_blank" rel="noopener noreferrer">Original page <span aria-hidden="true">↗</span></a></div><article class="markdown"><div class="theme-doc-markdown markdown"><header><h1>Get started with microservice orchestration</h1></header><span class="badge badge--beginner">Beginner</span>
+<span class="badge badge--medium">Time estimate: 25 minutes</span>
+<!-- -->
+<p>Using Camunda 8, you can orchestrate the microservices necessary to achieve your end-to-end automated business process. Whether you have existing microservices or are looking to build out your microservices, this guide will help you understand how you can start your microservice orchestration journey with Camunda 8.</p>
+<p>While this guide uses code snippets in Java, you do not need to be a Java developer to be successful. Additionally, you can orchestrate microservices with Camunda 8 in other programming languages.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="prerequisites">Prerequisites</h2>
+<ul>
+<li>Ensure you have a valid <a href="../getting-started/index.html">Camunda 8 account</a>, or sign up if you still need one.</li>
+<li>Java ≥ 8</li>
+<li>Maven</li>
+<li>IDE (IntelliJ, VSCode, or similar)</li>
+<li>Download and unzip or clone the <a href="https://github.com/camunda/camunda-platform-tutorials" rel="noopener noreferrer" target="_blank">repo</a>, then <code>cd</code> into <code>camunda-platform-tutorials/quick-start/microservice-orchestration/worker-java</code></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="design-your-process-with-bpmn">Design your process with BPMN</h3>
+<p>Start by designing your automated process using BPMN. This guide introduces you to the palette and a few BPMN symbols in Web Modeler.</p>
+<ol>
+<li>
+<p>To create a BPMN diagram, click <strong>New project</strong> within Modeler.</p>
+</li>
+<li>
+<p>Name your project and select <strong>Create new &gt; BPMN Diagram</strong>.</p>
+</li>
+<li>
+<p>Give your model a descriptive name and id. On the right side of the page, expand the <strong>General</strong> section of the properties panel to find the name and id fields. For this guide, we'll use <code>Microservice Orchestration Tutorial</code> for the name and <code>microservice-orchestration-tutorial</code> for the id.</p>
+</li>
+<li>
+<p>Use Web Modeler to design a BPMN process with service tasks. These service tasks are used to call your microservices via workers. Create a service task by dragging the task icon from the palette, or by clicking the existing start event and clicking the task icon. Make sure there is an arrow connecting the start event to the task. Click the wrench icon and select <strong>Service Task</strong> to change the task type.
+<img alt="Task with dropdown showing config, including service task" class="img_ev3q" decoding="async" height="560" loading="lazy" src="../../../assets/media/d2bc405c0ae00f09a90f8826.png" width="664"/></p>
+</li>
+<li>
+<p>Add a descriptive name using the <strong>General</strong> section in the properties panel. For this guide, we'll use <code>Call Microservice</code>.</p>
+</li>
+<li>
+<p>In the properties panel, expand the <strong>Task definition</strong> section and use the <strong>Type</strong> field to enter a string used in connecting this service task to the corresponding microservice code. For this guide, we'll use <code>orchestrate-something</code> as the type. You will use this while <a href="#create-a-worker-for-the-service-task">creating a worker for the service task</a>. If you do not have an option to add the <strong>Type</strong>, use the wrench icon and select <strong>Service Task</strong>.</p>
+<p><img alt="Service task with properties panel open" class="img_ev3q" decoding="async" height="1072" loading="lazy" src="../../../assets/media/1c217d3683c8f0b5d751316e.png" width="768"/></p>
+</li>
+<li>
+<p>Add an end event by dragging one from the palette, or by clicking the end event when the last service task in your diagram has focus. Make sure there is an arrow connecting the service task to the end event.</p>
+</li>
+<li>
+<p>On the right upper corner click the blue <strong>Deploy</strong> button. Your diagram is now deployed to your cluster.</p>
+</li>
+<li>
+<p>Start a new process instance by clicking on the blue <strong>Run</strong> button.</p>
+</li>
+<li>
+<p>In the top left corner of the screen, click the square-shaped <strong>Camunda components</strong> button. Navigate to Operate to see your process instance with a token waiting at the service task by clicking <strong>View process instances</strong>.</p>
+</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-a-cluster">Create a cluster</h3>
+<p>To deploy and run your process, you must create a cluster in Camunda 8.</p>
+<ol>
+<li>To create a cluster, navigate to <strong>Console</strong> by clicking the square-shaped icon labeled <strong>Camunda components</strong> in the top left corner, and click <strong>Console</strong>.</li>
+<li>Click the <strong>Clusters</strong> tab, and click <strong>Create new cluster</strong>.</li>
+<li>Name your cluster. For the purpose of this guide, we recommend using the <strong>Stable</strong> channel and the latest generation. Additionally, select your region. Click <strong>Create cluster</strong>.</li>
+<li>Your cluster will take a few moments to create. Check the status on the <strong>Clusters</strong> page or by clicking into the cluster itself and looking at the <strong>Applications</strong> section.</li>
+</ol>
+<p>Even while the cluster shows a status <strong>Creating</strong>, you can still proceed to begin modeling.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" fill-rule="evenodd"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>Zeebe must show a status of <strong>Healthy</strong> to properly deploy your model.</p></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="development-clusters">Development clusters</h2>
+<p>Starter plan users have one <strong>development cluster</strong>, with free execution for development, included in their plan.
+Deployment and execution of models (process instances, decision instances, and task users) is provided at no cost.
+Additional clusters can be purchased through your <a href="../../components/console/manage-plan/update-billing-reservations/index.html">billing reservations</a>.</p>
+<p>Visit the <a href="../../components/concepts/clusters/index.html">clusters page</a> to learn more about the differences between <strong>development clusters</strong> and <strong>production clusters</strong>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-credentials-for-your-zeebe-client">Create credentials for your Zeebe client</h3>
+<p>To interact with your Camunda 8 cluster, you'll use the Zeebe client. First, you'll need to create credentials.</p>
+<ol>
+<li>The main page for Console should be open on another tab. Use Console to navigate to your clusters either through the navigation <strong>Clusters</strong> or by using the section under <strong>View all</strong> on the <strong>Clusters</strong> section of the main dashboard. Click on your existing cluster. This will open the <strong>Overview</strong> for your cluster, where you can find your cluster id and region. You will need this information later when creating a worker in the next section.<!-- -->
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" fill-rule="evenodd"></path></svg></span>note</div><div class="admonitionContent_BuS1"><p>If your account is new, you should have a cluster already available. If no cluster is available, or you’d like to create a new one, click <strong>Create New Cluster</strong>.</p></div></div>
+</li>
+<li>Navigate to the <strong>API</strong> tab. Click <strong>Create</strong>.</li>
+<li>Provide a descriptive name for your client like <code>microservice-worker</code>. For this tutorial, the scope can be the default Zeebe scope. Click <strong>Create</strong>.</li>
+<li>Your client credentials can be copied or downloaded at this point. You will need your client id and your client secret when creating a worker in the next section, so keep this window open. Once you close or navigate away from this screen, you will not be able to see them again.</li>
+</ol>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="create-a-worker-for-the-service-task">Create a worker for the service task</h3>
+<p>Next, we’ll create a worker for the service task by associating it with the type we specified on the service task in the BPMN diagram.</p>
+<ol>
+<li>Open the downloaded or cloned project (<a href="https://github.com/camunda/camunda-platform-tutorials" rel="noopener noreferrer" target="_blank">repo</a>, then <code>cd</code> into <code>camunda-platform-tutorials/quick-start/microservice-orchestration/worker-java</code>) in your IDE .</li>
+<li>Add your credentials to <code>application.properties</code>. Your client id and client secret are available from the previous section in the credential text file you downloaded or copied. Go to the cluster overview page to find your cluster id and region.</li>
+<li>In the <code>Worker.java</code> file, change the type to match what you specified in the BPMN diagram. If you followed the previous steps for this guide and entered “orchestrate-something”, no action is required.</li>
+<li>After making these changes, perform a Maven install, then run the Worker.java <code>main</code> method via your favorite IDE. If you prefer using a terminal, run <code>mvn package exec:java</code>.</li>
+<li>Using the Modeler tab in your browser, navigate to Operate and you will see your token has moved to the end event, completing this process instance.</li>
+</ol>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="wrap-up">Wrap up</h2>
+<p>Congratulations! You successfully built your first microservice orchestration solution with Camunda 8.</p>
+<p>A core value of Camunda 8 lies in the flexibility offered to developers. You can write workers in many different languages. Camunda takes care of the orchestration.</p>
+<p>Don't want to build the process yourself? Click this button to create it from a template in Camunda 8 SaaS, or sign up first.</p>
+<div style="display:flex;gap:8px"><a class="button button--outline button--secondary button--lg" href="https://marketplace.camunda.com/en-US/apps/437143/microservice-orchestration-quick-start"><p>Open model in Camunda 8</p></a><a class="button button--outline button--secondary button--lg" href="https://signup.camunda.com/accounts?utm_source=docs.camunda.io&amp;utm_medium=referral"><p>Sign up</p></a></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-resources-and-next-steps">Additional resources and next steps</h2>
+<ul>
+<li>Learn more about Camunda 8 and what it can do by reading <a href="../../components/concepts/what-is-camunda-8/index.html">What is Camunda 8</a> or watching our <a href="https://bit.ly/3TjNEm7" rel="noopener noreferrer" target="_blank">Overview video</a> in Camunda Academy.</li>
+<li>Get your local environment ready for development with Camunda 8 by <a href="../setting-up-development-project/index.html">setting up your first development project</a>.</li>
+</ul></div></article><nav class="pagination" aria-label="Adjacent pages"><a href="../orchestrate-apis/index.html">Previous Getting started with API orchestration</a><a href="../getting-started-java-spring/index.html">Next Getting started as a Java developer using Spring</a></nav><footer>Documentation © Camunda. Independent archive; presentation modified. <a href="../../../LICENSE.txt">License</a><a href="../../../archive-report.json">Archive details</a></footer></main>
+<aside class="page-toc" aria-label="On this page"><h2>On this page</h2><a class="toc-h2" href="#prerequisites">Prerequisites</a><a class="toc-h3" href="#design-your-process-with-bpmn">Design your process with BPMN</a><a class="toc-h3" href="#create-a-cluster">Create a cluster</a><a class="toc-h2" href="#development-clusters">Development clusters</a><a class="toc-h3" href="#create-credentials-for-your-zeebe-client">Create credentials for your Zeebe client</a><a class="toc-h3" href="#create-a-worker-for-the-service-task">Create a worker for the service task</a><a class="toc-h2" href="#wrap-up">Wrap up</a><a class="toc-h2" href="#additional-resources-and-next-steps">Additional resources and next steps</a></aside></div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="search-heading"><h2 id="search-title">Search documentation</h2><button id="close-search" type="button" aria-keyshortcuts="Escape" title="Close search (Esc)">Close <kbd>Esc</kbd></button></div>
+<label class="sr-only" for="search-input">Search all Camunda 8.5 documentation</label><input id="search-input" type="search" placeholder="Search a topic, component, or phrase…" autocomplete="off" spellcheck="false">
+<p id="search-status" role="status">Type to search all archived pages.</p><div id="search-results"></div></dialog></body></html>

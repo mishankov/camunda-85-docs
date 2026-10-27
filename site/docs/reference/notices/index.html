@@ -1,0 +1,608 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Offline archive of the Camunda 8.5 documentation. Security notices">
+<title>Security notices · Camunda 8.5 archive</title><script src="../../../assets/theme.js"></script><link rel="stylesheet" href="../../../assets/site.css">
+<script defer src="../../../assets/site.js" data-root="../../../"></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="../../../index.html">Camunda <strong>8.5</strong></a>
+<nav class="primary-nav" aria-label="Documentation sections"><a href="../../guides/index.html">Guides</a><a href="../../components/index.html">Using Camunda 8</a><a href="../../self-managed/about-self-managed/index.html">Self-Managed</a><a href="../../apis-tools/working-with-apis-tools/index.html">APIs &amp; tools</a><a href="../index.html" aria-current="location">Reference</a><a href="../../tags/index.html">Topics</a></nav>
+<div class="header-tools"><button class="search-button" type="button" aria-haspopup="dialog" aria-controls="search-dialog" aria-keyshortcuts="Meta+K Control+K /" title="Search documentation (⌘K / Ctrl+K or /)"><span>Search documentation</span><kbd class="search-shortcut">⌘ K</kbd></button>
+<div id="theme-choice" class="theme-picker" role="group" aria-label="Color theme" aria-keyshortcuts="Shift+D" title="Color theme (Shift+D)">
+<button type="button" data-theme-choice="system" aria-label="System theme" title="System theme (Shift+D to cycle)" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></button>
+<button type="button" data-theme-choice="light" aria-label="Light theme" title="Light theme (Shift+D to cycle)" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+<button type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark theme (Shift+D to cycle)" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5 8.5 8.5 0 1 0 20.5 13.2Z"/></svg></button>
+</div></div></header>
+<div class="archive-notice">Archived documentation · Version 8.5 is no longer maintained. <a href="https://docs.camunda.io/">Current Camunda docs ↗</a></div>
+<div class="layout"><aside class="sidebar" aria-label="Documentation"><details class="section-menu" open><summary title="Expand or collapse contents (Enter / Space)">Reference <span>Contents</span></summary><nav aria-label="Reference"><a href="../index.html">Reference</a><a href="../announcements/index.html">Announcements</a><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Release notes</summary><div><a href="../release-notes/index.html">Release notes</a><a href="../release-notes/850/index.html">8.5 Release notes</a></div></details><a href="../contact/index.html">Contact</a><a href="../auto-updates/index.html">Auto-updates</a><a href="../status/index.html">Camunda 8 SaaS status</a><a href="../supported-environments/index.html">Supported environments</a><a href="../dependencies/index.html">Dependencies</a><a href="../camunda-help-center/index.html">Access the Camunda Help Center</a><a href="../alpha-features/index.html">Alpha features</a><a href="../licenses/index.html">Licenses</a><a href="index.html" aria-current="page">Security notices</a><a href="../release-policy/index.html">Release policy</a><a href="../regions/index.html">Regions</a><a href="../saas-ip-addresses/index.html">Hostnames and IP addresses for Camunda connections</a><a href="../usage-metrics/index.html">Usage metrics</a><a href="../glossary/index.html">Glossary</a></nav></details></aside>
+<main id="main" tabindex="-1"><div class="article-meta"><span>Reference / 8.5</span><a class="original-link" href="https://unsupported.docs.camunda.io/8.5/docs/reference/notices/" target="_blank" rel="noopener noreferrer">Original page <span aria-hidden="true">↗</span></a></div><article class="markdown"><div class="theme-doc-markdown markdown"><header><h1>Security notices</h1></header><h2 class="anchor anchorWithStickyNavbar_LWe7" id="security-notices">Security notices</h2>
+<p>Camunda publishes security notices after fixes are available.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="notice-29">Notice 29</h2>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date">Publication date</h3>
+<p>October 7th, 2025</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected">Products affected</h3>
+<ul>
+<li>Camunda Tasklist</li>
+<li>Camunda Zeebe</li>
+<li>Camunda Operate</li>
+<li>Camunda Optimize</li>
+<li>Camunda Identity</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="impact">Impact</h3>
+<p>The embedded Netty was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-58056" rel="noopener noreferrer" target="_blank">CVE-2025-58056</a>, an HTTP request
+smuggling vulnerability in Netty. Incorrect parsing of chunked transfer encoding could allow attackers to craft
+malicious requests that are interpreted inconsistently by proxies and Netty.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected">How to determine if the installation is affected</h3>
+<p>You are using:</p>
+<ul>
+<li>Tasklist 8.7.0 - 8.7.12 or 8.5.0 - 8.5.22</li>
+<li>Zeebe 8.7.0 - 8.7.12 or 8.5.0 - 8.5.24</li>
+<li>Operate 8.7.0 - 8.7.12 or 8.5.0 - 8.5.20</li>
+<li>Optimize 8.7.0 - 8.7.9 or 8.6.0 - 8.6.16</li>
+<li>Identity 8.7.0 - 8.7.6 or 8.6.0 - 8.6.19 or 8.5.0 - 8.5.21</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="solution">Solution</h3>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Tasklist 8.7.13, 8.5.23</li>
+<li>Zeebe 8.7.13, 8.5.25</li>
+<li>Operate 8.7.13, 8.5.21</li>
+<li>Optimize 8.7.10, 8.6.17</li>
+<li>Identity 8.7.7, 8.6.20, 8.5.22</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-28">Notice 28</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-1">Publication date</h4>
+<p>September 9, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-1">Products affected</h4>
+<ul>
+<li>Camunda Optimize</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-1">Impact</h4>
+<p>Optimize was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-5115" rel="noopener noreferrer" target="_blank">CVE-2025-5115</a>, which allows a remote attacker to repeatedly send malformed HTTP/2 frames that exhaust a Jetty server’s CPU and memory, causing a denial-of-service.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-1">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Optimize 8.7.0 - 8.7.8 or 8.6.0 - 8.6.15</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-1">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Optimize 8.7.9, 8.6.16</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-27">Notice 27</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-2">Publication date</h4>
+<p>August 27, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-2">Products affected</h4>
+<ul>
+<li>Camunda Optimize</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-2">Impact</h4>
+<p>Optimize's email functionality was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-7962" rel="noopener noreferrer" target="_blank">CVE-2025-7962</a>, which allowed for SMTP injection by providing forged email recipient addresses that could lead to malicious content being sent to arbitrary recipients.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-2">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Optimize 8.7.0 - 8.7.7 or 8.6.0 - 8.6.14</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-2">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Optimize 8.7.8, 8.6.15</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-26">Notice 26</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-3">Publication date</h4>
+<p>August 27th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-3">Products affected</h4>
+<ul>
+<li>Camunda Optimize</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-3">Impact</h4>
+<p>Optimize was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53864" rel="noopener noreferrer" target="_blank">CVE-2025-53864</a> which allows a remote attacker to cause a denial of service via a deeply nested JSON object supplied in a JWT claim set, because of uncontrolled recursion.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-3">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Optimize 8.7.0 - 8.7.7 or 8.6.0 - 8.6.14</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-3">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Optimize 8.7.8, 8.6.15</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-25">Notice 25</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-4">Publication date</h4>
+<p>August 27th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-4">Products affected</h4>
+<ul>
+<li>Camunda Tasklist</li>
+<li>Camunda Zeebe</li>
+<li>Camunda Operate</li>
+<li>Camunda Optimize</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-4">Impact</h4>
+<p>The embedded Apache Tomcat was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-48989" rel="noopener noreferrer" target="_blank">CVE-2025-48989</a> which made Tomcat vulnerable to the MadeYouReset attack.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-4">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Tasklist 8.7.0 - 8.7.10 or 8.6.0 - 8.6.24 or 8.5.0 - 8.5.20</li>
+<li>Zeebe 8.7.0 - 8.7.10 or 8.6.0 - 8.6.24</li>
+<li>Operate 8.7.0 - 8.7.10 or 8.6.0 - 8.6.24 or 8.5.0 - 8.5.18</li>
+<li>Optimize 8.7.0 - 8.7.7 or 8.6.0 - 8.6.14</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-4">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Tasklist 8.7.11, 8.6.25, 8.5.21</li>
+<li>Zeebe 8.7.11, 8.6.25</li>
+<li>Operate 8.7.11, 8.6.25, 8.5.19</li>
+<li>Optimize 8.7.8, 8.6.15</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-24">Notice 24</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-5">Publication date</h4>
+<p>August 27th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-5">Products affected</h4>
+<ul>
+<li>Camunda Tasklist</li>
+<li>Camunda Zeebe</li>
+<li>Camunda Operate</li>
+<li>Camunda Identity</li>
+<li>Camunda Optimize</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-5">Impact</h4>
+<p>The embedded Netty was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-55163" rel="noopener noreferrer" target="_blank">CVE-2025-55163</a> which allows malformed HTTP/2 control frames usage that results in resource exhaustion and distributed denial of service.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-5">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Tasklist 8.7.0 - 8.7.10 or 8.6.0 - 8.6.24 or 8.5.0 - 8.5.20</li>
+<li>Zeebe 8.7.0 - 8.7.10 or 8.6.0 - 8.6.24 or 8.5.0 - 8.5.22</li>
+<li>Operate 8.7.0 - 8.7.10 or 8.6.0 - 8.6.24 or 8.5.0 - 8.5.18</li>
+<li>Identity 8.7.0 - 8.7.5 or 8.6.0 - 8.6.18 or 8.5.0 - 8.5.19</li>
+<li>Optimize 8.7.0 - 8.7.7 or 8.6.0 - 8.6.14</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-5">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Tasklist 8.7.11, 8.6.25, 8.5.21</li>
+<li>Zeebe 8.7.11, 8.6.25, 8.5.23</li>
+<li>Operate 8.7.11, 8.6.25, 8.5.19</li>
+<li>Identity 8.7.6, 8.6.19, 8.5.20</li>
+<li>Optimize 8.7.8, 8.6.15</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-23">Notice 23</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-6">Publication date</h4>
+<p>July 31st, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-6">Products affected</h4>
+<ul>
+<li>Camunda Tasklist</li>
+<li>Camunda Zeebe</li>
+<li>Camunda Operate</li>
+<li>Camunda Identity</li>
+<li>Camunda Optimize</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-6">Impact</h4>
+<p>The embedded Spring Boot Tomcat was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-53506" rel="noopener noreferrer" target="_blank">CVE-2025-53506</a> which allowed for uncontrolled resource consumption that could be used to exhaust system resources in a potential DoS (denial of service) attack.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-6">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Tasklist 8.7.0 - 8.7.8 or 8.6.0 - 8.6.22 or 8.5.0 - 8.5.18</li>
+<li>Zeebe 8.7.0 - 8.7.8 or 8.6.0 - 8.6.22</li>
+<li>Operate 8.7.0 - 8.7.8 or 8.6.0 - 8.6.22 or 8.5.0 - 8.5.16</li>
+<li>Identity 8.7.0 - 8.7.4 or 8.6.0 - 8.6.17 or 8.5.0 - 8.5.18</li>
+<li>Optimize 8.7.0 - 8.7.6 or 8.6.0 - 8.6.12</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-6">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Tasklist 8.7.9, 8.6.23, 8.5.19</li>
+<li>Zeebe 8.7.9, 8.6.23</li>
+<li>Operate 8.7.9, 8.6.23, 8.5.17</li>
+<li>Identity 8.7.5, 8.6.18, 8.5.19</li>
+<li>Optimize 8.7.7, 8.6.13</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-22">Notice 22</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-7">Publication date</h4>
+<p>July 31st, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-7">Products affected</h4>
+<ul>
+<li>Camunda Tasklist</li>
+<li>Camunda Zeebe</li>
+<li>Camunda Operate</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-7">Impact</h4>
+<p>Part of our RESTful API that supported multipart file uploads was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-52520" rel="noopener noreferrer" target="_blank">CVE-2025-52520</a>, which could lead to potential DoS (denial of service) attacks.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-7">How to determine if the installation is affected</h4>
+<p>You are using:</p>
+<ul>
+<li>Tasklist 8.6.0 - 8.6.22 or 8.7.0 - 8.7.8</li>
+<li>Zeebe 8.6.0 - 8.6.22 or 8.7.0 - 8.7.8</li>
+<li>Operate 8.6.0 - 8.6.22 or 8.7.0 - 8.7.8</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-7">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Tasklist 8.6.22</li>
+<li>Tasklist 8.7.9</li>
+<li>Zeebe 8.6.23</li>
+<li>Zeebe 8.7.9</li>
+<li>Operate 8.6.23</li>
+<li>Operate 8.7.9</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-21">Notice 21</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-8">Publication date</h4>
+<p>June 18th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-8">Products affected</h4>
+<p>Camunda Web Modeler Self-Managed</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-8">Impact</h4>
+<p>The version of <code>org.postgresql:postgresql</code> used by Camunda Web Modeler Self-Managed was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-49146" rel="noopener noreferrer" target="_blank">CVE-2025-49146</a> potentially allowing a man-in-the-middle attacker to intercept connections when the PostgreSQL JDBC driver was configured with channel binding set to required.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-8">How to determine if the installation is affected</h4>
+<p>You are using Camunda Web Modeler Self-Managed version 8.6.0 - 8.6.12, or 8.7.0 - 8.7.3.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-8">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Camunda Web Modeler Self-Managed 8.6.12</li>
+<li>Camunda Web Modeler Self-Managed 8.7.3</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-20">Notice 20</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-9">Publication date</h4>
+<p>June 17th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-9">Products affected</h4>
+<p>Camunda Optimize</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-9">Impact</h4>
+<p>Camunda Optimize was affected by a vulnerability that allowed an attacker to gain improper access to Optimize data by using a modified JWT (JSON Web Token).</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-9">How to determine if the installation is affected</h4>
+<p>You are using Camunda Optimize ≤ 8.6.9 or ≤ 8.7.2.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-9">Solution</h4>
+<p>Camunda has provided the following release which contains a fix:</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.6.10-optimize" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.6.10</a></li>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.7.3-optimize" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.7.3</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-19">Notice 19</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-10">Publication date</h4>
+<p>May 21st, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-10">Products affected</h4>
+<p>Camunda Web Modeler</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-10">Impact</h4>
+<p>The version of <code>nodejs</code> used by Camunda Web Modeler was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23166" rel="noopener noreferrer" target="_blank">CVE-2025-23166</a> potentially allowing an adversary to remotely crash the Node.js runtime.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-10">How to determine if the installation is affected</h4>
+<p>You are using Camunda Web Modeler Self-Managed version ≤ 8.4.17, ≤ 8.5.18, ≤ 8.6.10, or ≤ 8.7.1.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-10">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Camunda Web Modeler Self-Managed 8.4.18</li>
+<li>Camunda Web Modeler Self-Managed 8.5.19</li>
+<li>Camunda Web Modeler Self-Managed 8.6.11</li>
+<li>Camunda Web Modeler Self-Managed 8.7.2</li>
+</ul>
+<p>The fix was deployed to Web Modeler SaaS on May 19, 2025, 15:10 CET.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-18">Notice 18</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-11">Publication date</h4>
+<p>April 8th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-11">Products affected</h4>
+<p>Camunda Optimize</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-11">Impact</h4>
+<p>Camunda Optimize was affected by a vulnerability that allowed an attacker to modify a JWT (JSON Web Token) so that they would be given improper access to Optimize.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-11">How to determine if the installation is affected</h4>
+<p>You are using Camunda Optimize ≤ 8.4.15, ≤ 8.5.12, ≤ 8.6.6, ≤ 8.7.0, ≤ 3.11.20, ≤ 3.12.15, ≤ 3.13.12, ≤ 3.14.3, ≤ 3.15.1.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-11">Solution</h4>
+<p>Camunda has provided the following release which contains a fix:</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.12.16" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.4.16</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.13.13" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.5.13</a></li>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.6.7-optimize" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.6.7</a></li>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.7.0-optimize" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.7.0</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.12.16" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.12.16</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.13.13" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.13.13</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.14.4" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.14.4</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.15.2" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.15.2</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-17">Notice 17</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-12">Publication date</h4>
+<p>April 8th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="products-affected-12">Products affected</h4>
+<p>Camunda Zeebe</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-12">Impact</h4>
+<p>When parsing unknown fields in the Protobuf Java Lite and Full library, a maliciously crafted message can cause a StackOverflow error and lead to a
+program crash.</p>
+<ul>
+<li>As Zeebe makes extensive use of Protobuf, this could lead to denial-of-service (DoS) issues on the server side.</li>
+<li>This issue allows an attacker to send specific payloads that will always result in <code>StackOverflowException</code>. This could lead to gateway performance issues and affect system availability.</li>
+<li>Although the gateway will not crash, it will spend more time working on these requests. An attacker could use this opportunity to slow it down and make it unusable by sending a large number of requests within a short time frame.</li>
+</ul>
+<p>No data is leaked, lost, or corrupted. This issue only affects application availability.</p>
+<p><a href="https://github.com/advisories/GHSA-735f-pc8j-v9w8" rel="noopener noreferrer" target="_blank">Learn more about this CVE at the GitHub Advisory Database</a>.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-12">How to determine if the installation is affected</h4>
+<p>You are using Camunda Zeebe 8.6.11.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-12">Solution</h4>
+<p>Camunda has provided the following release which contains a fix:</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.6.13" rel="noopener noreferrer" target="_blank">Camunda Zeebe 8.6.13</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-16">Notice 16</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-13">Publication date</h4>
+<p>May 21st, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected">Product affected</h4>
+<p>Camunda Web Modeler</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-13">Impact</h4>
+<p>The version of <code>nodejs</code> used by Camunda Web Modeler was affected by <a href="https://nvd.nist.gov/vuln/detail/CVE-2025-23166" rel="noopener noreferrer" target="_blank">CVE-2025-23166</a> potentially allowing an adversary to remotely crash the Node.js runtime.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-13">How to determine if the installation is affected</h4>
+<p>You are using Camunda Web Modeler Self-Managed version ≤ 8.4.17, ≤ 8.5.18, ≤ 8.6.10, or ≤ 8.7.1.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-13">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Camunda Web Modeler Self-Managed 8.4.18</li>
+<li>Camunda Web Modeler Self-Managed 8.5.19</li>
+<li>Camunda Web Modeler Self-Managed 8.6.11</li>
+<li>Camunda Web Modeler Self-Managed 8.7.2</li>
+</ul>
+<p>The fix was deployed to Web Modeler SaaS on May 19, 2025, 15:10 CET.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-15">Notice 15</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-14">Publication date</h4>
+<p>April 8th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-1">Product affected</h4>
+<p>Camunda Optimize</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-14">Impact</h4>
+<p>Some Camunda Zeebe versions were affected by a vulnerability that allowed a malicious attacker to craft network packets that could crash the gateway.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-14">How to determine if the installation is affected</h4>
+<p>You are using Camunda Optimize ≤ 8.4.15, ≤ 8.5.12, ≤ 8.6.6, ≤ 8.7.0, ≤ 3.11.20, ≤ 3.12.15, ≤ 3.13.12, ≤ 3.14.3, ≤ 3.15.0</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-14">Solution</h4>
+<p>Camunda has provided the following release which contains a fix:</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.12.16" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.4.16</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.13.13" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.5.13</a></li>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.6.7-optimize" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.6.7</a></li>
+<li><a href="https://github.com/camunda/camunda/releases/tag/8.7.0-optimize" rel="noopener noreferrer" target="_blank">Camunda Optimize 8.7.0</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.12.16" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.12.16</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.13.13" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.13.13</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.14.4" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.14.21</a></li>
+<li><a href="https://github.com/camunda/camunda-optimize/releases/tag/3.15.1" rel="noopener noreferrer" target="_blank">Camunda Optimize 3.15.1</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-14">Notice 14</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-15">Publication date</h4>
+<p>March 11th, 2025</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-2">Product affected</h4>
+<p>Camunda Web Modeler</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-15">Impact</h4>
+<p>The version of <code>koa</code> used by Camunda Web Modeler was affected by the following vulnerability:</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2025-25200" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2025-25200</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-15">How to determine if the installation is affected</h4>
+<p>You are using Camunda Web Modeler Self-Managed version ≤ 8.3.16, ≤ 8.4.14, ≤ 8.5.15, or ≤ 8.6.7.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-15">Solution</h4>
+<p>Camunda has provided the following releases which contain the fix:</p>
+<ul>
+<li>Camunda Web Modeler Self-Managed 8.3.17</li>
+<li>Camunda Web Modeler Self-Managed 8.4.15</li>
+<li>Camunda Web Modeler Self-Managed 8.5.16</li>
+<li>Camunda Web Modeler Self-Managed 8.6.8</li>
+</ul>
+<p>The fix was deployed to Web Modeler SaaS on February 14, 2025, 08:50 CET.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-13">Notice 13</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-16">Publication date</h4>
+<p>July 18th, 2024</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-3">Product affected</h4>
+<p>Camunda Identity</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-16">Impact</h4>
+<p>The version of <code>Apache Tomcat</code> used by Camunda Identity was affected by the following vulnerability:</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2024-34750" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2024-34750</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-16">How to determine if the installation is affected</h4>
+<p>You are using Camunda Identity version 8.5.3 or previous.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-16">Solution</h4>
+<p>Camunda has provided the following release which contains a fix:</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/identity/releases/tag/8.5.4" rel="noopener noreferrer" target="_blank">Camunda Identity 8.5.4</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-12">Notice 12</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-17">Publication date</h4>
+<p>October 3rd, 2023</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-4">Product affected</h4>
+<p>Camunda Desktop Modeler</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-17">Impact</h4>
+<p>The version of <code>libwebp</code> shipped with Camunda Desktop Modeler was affected by the following vulnerability:</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2023-4863" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2023-4863</a></li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-17">How to determine if the installation is affected</h4>
+<p>You are using Camunda Desktop Modeler version 5.15.1 or previous.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-17">Solution</h4>
+<p>Camunda has provided the following release which contains a fix:</p>
+<ul>
+<li><a href="https://downloads.camunda.cloud/release/camunda-modeler/5.15.2/" rel="noopener noreferrer" target="_blank">Camunda Desktop Modeler 5.15.2</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-11">Notice 11</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-18">Publication date</h4>
+<p>April 17, 2023</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-5">Product affected</h4>
+<p>Tasklist</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-18">Impact</h4>
+<p>The REST API functionality of Tasklist 8.2.0 and 8.2.1 allows unauthenticated access to the following methods/URLs:</p>
+<ul>
+<li>GET /v1/tasks/{taskId}</li>
+<li>POST /v1/tasks/search</li>
+<li>POST /v1/tasks/{taskId}/variables/search</li>
+<li>POST /v1/forms/{formId}</li>
+<li>POST /v1/variables/{variableId}</li>
+</ul>
+<p>Find more information about the methods in our <a href="../../apis-tools/tasklist-api-rest/tasklist-api-rest-overview/index.html">Tasklist REST API documentation</a>.</p>
+<p>Therefore, if you use Tasklist 8.2.0 or 8.2.1, and if you have sensible data stored in process variables (accessed by user tasks), this data could have been accessed by users knowing the endpoint of the Tasklist instance without authentication.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-18">How to determine if the installation is affected</h4>
+<p>You are using Tasklist version 8.2.0 or 8.2.1.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-18">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda-platform/releases/tag/8.2.2" rel="noopener noreferrer" target="_blank">Tasklist 8.2.2</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-10">Notice 10</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-19">Publication Date:</h4>
+<p>November 10th, 2022</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-6">Product affected:</h4>
+<p>Tasklist</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-19">Impact:</h4>
+<p>The Tasklist Docker image contain an OpenSSL version 3.0.2 for which the following CVEs have been published:</p>
+<ul>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3602" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-3602</a></li>
+<li><a href="https://nvd.nist.gov/vuln/detail/CVE-2022-3786" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-3786</a></li>
+</ul>
+<p>At this point, Camunda is not aware of any specific attack vector in Tasklist allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-19">How to determine if the installation is affected</h4>
+<p>You are Tasklist version (8.0.3 ≥ version ≤ 8.0.7) or ≤ 8.1.2</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-19">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda/camunda-platform/releases/tag/8.1.3" rel="noopener noreferrer" target="_blank">Tasklist 8.1.3</a></li>
+<li><a href="https://github.com/camunda/camunda-platform/releases/tag/8.0.8" rel="noopener noreferrer" target="_blank">Tasklist 8.0.8</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-9">Notice 9</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-20">Publication Date:</h4>
+<p>April 11th, 2022</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-7">Product affected:</h4>
+<p>Zeebe, Operate, Tasklist, IAM</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-20">Impact:</h4>
+<p>Zeebe, Operate, Tasklist and IAM are using the Spring framework for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2022-22965" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2022-22965</a></p>
+<p>At this point, Camunda is not aware of any specific attack vector in Zeebe, Operate, Tasklist or IAM allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-20">How to determine if the installation is affected</h4>
+<p>You are using Zeebe, Operate or Tasklist version ≤ 1.2.11 or ≤ 1.3.6</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-20">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.3.7" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.3.7</a></li>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.12" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.2.12</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-8">Notice 8</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-21">Publication Date:</h4>
+<p>December 31th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-8">Product affected:</h4>
+<p>Zeebe, Operate, Tasklist</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-21">Impact:</h4>
+<p>Zeebe, Operate and Tasklist bundle log4j-core for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44832" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-44832</a>.
+At this point, Camunda is not aware of any specific attack vector in Zeebe, Operate or Tasklist allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-21">How to determine if the installation is affected</h4>
+<p>You are using Zeebe, Operate or Tasklist version ≤ 1.2.8 or ≤ 1.1.9</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-21">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.9" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.2.9</a></li>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.1.10" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.1.10</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-7">Notice 7</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-22">Publication Date:</h4>
+<p>December 31th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-9">Product affected:</h4>
+<p>IAM</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-22">Impact:</h4>
+<p>IAM bundles log4j libraries for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44832" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-44832</a>.
+Specifically, IAM bundles log4j-api and log4j-to-slf4j. However, IAM does not bundle the log4j-core library which contains the vulnerability referred to by the CVE. As a result, Camunda does not consider IAM to be affected by the vulnerability. Still, Camunda recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-22">How to determine if the installation is affected</h4>
+<p>You are using IAM version ≤ 1.2.8</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-22">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.9" rel="noopener noreferrer" target="_blank">IAM 1.2.9</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-6">Notice 6</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-23">Publication Date:</h4>
+<p>December 22th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-10">Product affected:</h4>
+<p>Zeebe, Operate, Tasklist</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-23">Impact:</h4>
+<p>Zeebe, Operate and Tasklist bundle log4j-core for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45105" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-45105</a>.
+At this point, Camunda is not aware of any specific attack vector in Zeebe, Operate or Tasklist allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-23">How to determine if the installation is affected</h4>
+<p>You are using Zeebe, Operate or Tasklist version ≤ 1.2.7 or ≤ 1.1.8</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-23">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.8" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.2.8</a></li>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.1.9" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.1.9</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-5">Notice 5</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-24">Publication Date:</h4>
+<p>December 22th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-11">Product affected:</h4>
+<p>IAM</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-24">Impact:</h4>
+<p>IAM bundles log4j libraries for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45105" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-45105</a>.
+Specifically, IAM bundles log4j-api and log4j-to-slf4j. However, IAM does not bundle the log4j-core library which contains the vulnerability referred to by the CVE. As a result, Camunda does not consider IAM to be affected by the vulnerability. Still, Camunda recommends applying fixes as mentioned in the Solution section below.</p>
+<p>IAM bundles logback libraries for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-42550" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-42550</a>.
+At this point, Camunda is not aware of any specific attack vector in IAM allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-24">How to determine if the installation is affected</h4>
+<p>You are using IAM version ≤ 1.2.7</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-24">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.8" rel="noopener noreferrer" target="_blank">IAM 1.2.8</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-4">Notice 4</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-25">Publication Date:</h4>
+<p>December 17th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-12">Product affected:</h4>
+<p>Zeebe, Operate, Tasklist</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-25">Impact:</h4>
+<p>Zeebe, Operate and Tasklist bundle log4j-core for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45046" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-45046</a>.
+At this point, Camunda is not aware of any specific attack vector in Zeebe, Operate or Tasklist allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-25">How to determine if the installation is affected</h4>
+<p>You are using Zeebe, Operate or Tasklist version ≤ 1.2.6 or ≤ 1.1.7</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-25">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.7" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.2.7</a></li>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.1.8" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.1.8</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-3">Notice 3</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-26">Publication Date:</h4>
+<p>December 17th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-13">Product affected:</h4>
+<p>IAM</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-26">Impact:</h4>
+<p>IAM bundles log4j libraries for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-45046" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-45046</a>.
+Specifically, IAM bundles log4j-api and log4j-to-slf4j. However, IAM does not bundle the log4j-core library which contains the vulnerability referred to by the CVE. As a result, Camunda does not consider IAM to be affected by the vulnerability. Still, Camunda recommends applying fixes as mentioned in the Solution section below.</p>
+<p>IAM bundles logback libraries for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-42550" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-42550</a>.
+At this point, Camunda is not aware of any specific attack vector in IAM allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-26">How to determine if the installation is affected</h4>
+<p>You are using IAM version ≤ 1.2.6</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-26">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.7" rel="noopener noreferrer" target="_blank">IAM 1.2.7</a></li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-2">Notice 2</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-27">Publication Date:</h4>
+<p>December 14th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-14">Product affected:</h4>
+<p>Zeebe, Operate, Tasklist</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-27">Impact:</h4>
+<p>Zeebe, Operate and Tasklist bundle log4j-core for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-44228</a>.
+At this point, Camunda is not aware of any specific attack vector in Zeebe, Operate or Tasklist allowing attackers to exploit the vulnerability but recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-27">How to determine if the installation is affected</h4>
+<p>You are using Zeebe, Operate or Tasklist version ≤ 1.2.5 or ≤ 1.1.6</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-27">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.6" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.2.6</a></li>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.1.7" rel="noopener noreferrer" target="_blank">Zeebe, Operate and Tasklist 1.1.7</a></li>
+</ul>
+<p>Apply the patches mentioned above or set the JVM option <code>-Dlog4j2.formatMsgNoLookups=true</code></p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="notice-1">Notice 1</h3>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="publication-date-28">Publication Date:</h4>
+<p>December 14th, 2021</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="product-affected-15">Product affected:</h4>
+<p>IAM</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="impact-28">Impact:</h4>
+<p>IAM bundles log4j libraries for which the following CVE has been published: <a href="https://nvd.nist.gov/vuln/detail/CVE-2021-44228" rel="noopener noreferrer" target="_blank">https://nvd.nist.gov/vuln/detail/CVE-2021-44228</a>.
+Specifically, IAM bundles log4j-api and log4j-to-slf4j. However, IAM does not bundle the log4j-core library which contains the vulnerability referred to by the CVE. As a result, Camunda does not consider IAM to be affected by the vulnerability.</p>
+<p>Still, Camunda recommends applying fixes as mentioned in the Solution section below.</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="how-to-determine-if-the-installation-is-affected-28">How to determine if the installation is affected</h4>
+<p>You are using IAM version ≤ 1.2.5</p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="solution-28">Solution</h4>
+<p>Camunda has provided the following releases which contain a fix</p>
+<ul>
+<li><a href="https://github.com/camunda-cloud/zeebe/releases/tag/1.2.6" rel="noopener noreferrer" target="_blank">IAM 1.2.6</a></li>
+</ul>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="report-a-vulnerability">Report a vulnerability</h2>
+<p>Please report security vulnerabilities to Camunda immediately. Please follow the steps on our <a href="https://camunda.com/security#report-a-vulnerability" rel="noopener noreferrer" target="_blank">Camunda Security page</a> to report a vulnerability.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="additional-security-information">Additional security information</h2>
+<p>For more information about security at Camunda, including our security policy, security issue management, and more, see <a href="https://camunda.com/security" rel="noopener noreferrer" target="_blank">Camunda.com/security</a>.</p></div></article><nav class="pagination" aria-label="Adjacent pages"><a href="../licenses/index.html">Previous Licenses</a><a href="../release-policy/index.html">Next Release policy</a></nav><footer>Documentation © Camunda. Independent archive; presentation modified. <a href="../../../LICENSE.txt">License</a><a href="../../../archive-report.json">Archive details</a></footer></main>
+<aside class="page-toc" aria-label="On this page"><h2>On this page</h2><a class="toc-h2" href="#security-notices">Security notices</a><a class="toc-h2" href="#notice-29">Notice 29</a><a class="toc-h3" href="#publication-date">Publication date</a><a class="toc-h3" href="#products-affected">Products affected</a><a class="toc-h3" href="#impact">Impact</a><a class="toc-h3" href="#how-to-determine-if-the-installation-is-affected">How to determine if the installation is affected</a><a class="toc-h3" href="#solution">Solution</a><a class="toc-h3" href="#notice-28">Notice 28</a><a class="toc-h3" href="#notice-27">Notice 27</a><a class="toc-h3" href="#notice-26">Notice 26</a><a class="toc-h3" href="#notice-25">Notice 25</a><a class="toc-h3" href="#notice-24">Notice 24</a><a class="toc-h3" href="#notice-23">Notice 23</a><a class="toc-h3" href="#notice-22">Notice 22</a><a class="toc-h3" href="#notice-21">Notice 21</a><a class="toc-h3" href="#notice-20">Notice 20</a><a class="toc-h3" href="#notice-19">Notice 19</a><a class="toc-h3" href="#notice-18">Notice 18</a><a class="toc-h3" href="#notice-17">Notice 17</a><a class="toc-h3" href="#notice-16">Notice 16</a><a class="toc-h3" href="#notice-15">Notice 15</a><a class="toc-h3" href="#notice-14">Notice 14</a><a class="toc-h3" href="#notice-13">Notice 13</a><a class="toc-h3" href="#notice-12">Notice 12</a><a class="toc-h3" href="#notice-11">Notice 11</a><a class="toc-h3" href="#notice-10">Notice 10</a><a class="toc-h3" href="#notice-9">Notice 9</a><a class="toc-h3" href="#notice-8">Notice 8</a><a class="toc-h3" href="#notice-7">Notice 7</a><a class="toc-h3" href="#notice-6">Notice 6</a><a class="toc-h3" href="#notice-5">Notice 5</a><a class="toc-h3" href="#notice-4">Notice 4</a><a class="toc-h3" href="#notice-3">Notice 3</a><a class="toc-h3" href="#notice-2">Notice 2</a><a class="toc-h3" href="#notice-1">Notice 1</a><a class="toc-h2" href="#report-a-vulnerability">Report a vulnerability</a><a class="toc-h2" href="#additional-security-information">Additional security information</a></aside></div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="search-heading"><h2 id="search-title">Search documentation</h2><button id="close-search" type="button" aria-keyshortcuts="Escape" title="Close search (Esc)">Close <kbd>Esc</kbd></button></div>
+<label class="sr-only" for="search-input">Search all Camunda 8.5 documentation</label><input id="search-input" type="search" placeholder="Search a topic, component, or phrase…" autocomplete="off" spellcheck="false">
+<p id="search-status" role="status">Type to search all archived pages.</p><div id="search-results"></div></dialog></body></html>

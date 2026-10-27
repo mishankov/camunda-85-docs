@@ -1,0 +1,13 @@
+{
+  "name": "camunda-85-docs",
+  "private": true,
+  "scripts": {
+    "test": "node --test tests/*.test.mjs",
+    "test:scraper": ".venv/bin/python -m unittest discover -s tests -p 'test_*.py'",
+    "serve": "python3 -m http.server 8000 --directory site",
+    "verify": ".venv/bin/python scripts/verify.py"
+  },
+  "devDependencies": {
+    "playwright": "1.58.2"
+  }
+}

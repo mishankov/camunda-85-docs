@@ -1,0 +1,19 @@
+Camunda 8.5 documentation archive
+
+Documentation copyright Camunda and the original contributors.
+Original published documentation:
+https://unsupported.docs.camunda.io/8.5/docs/components/
+Upstream documentation repository:
+https://github.com/camunda/camunda-docs
+Upstream documentation license:
+https://github.com/camunda/camunda-docs/blob/main/LICENSE.txt
+
+The upstream documentation license is reproduced in
+LICENSE-DOCUMENTATION.txt and site/LICENSE.txt. Rights in third-party
+content remain with the respective owners.
+
+This is an independent archive. The presentation, navigation, code-tab
+layout, search, and color themes have been modified for a standalone
+static website. Each article includes its original source link.
+Credential-shaped Slack webhook examples are replaced with placeholders.
+This archive is not an official Camunda documentation service.

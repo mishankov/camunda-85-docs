@@ -1,0 +1,107 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="description" content="Offline archive of the Camunda 8.5 documentation. Release policy">
+<title>Release policy · Camunda 8.5 archive</title><script src="../../../assets/theme.js"></script><link rel="stylesheet" href="../../../assets/site.css">
+<script defer src="../../../assets/site.js" data-root="../../../"></script></head>
+<body><a class="skip-link" href="#main">Skip to content</a>
+<header class="site-header"><a class="brand" href="../../../index.html">Camunda <strong>8.5</strong></a>
+<nav class="primary-nav" aria-label="Documentation sections"><a href="../../guides/index.html">Guides</a><a href="../../components/index.html">Using Camunda 8</a><a href="../../self-managed/about-self-managed/index.html">Self-Managed</a><a href="../../apis-tools/working-with-apis-tools/index.html">APIs &amp; tools</a><a href="../index.html" aria-current="location">Reference</a><a href="../../tags/index.html">Topics</a></nav>
+<div class="header-tools"><button class="search-button" type="button" aria-haspopup="dialog" aria-controls="search-dialog" aria-keyshortcuts="Meta+K Control+K /" title="Search documentation (⌘K / Ctrl+K or /)"><span>Search documentation</span><kbd class="search-shortcut">⌘ K</kbd></button>
+<div id="theme-choice" class="theme-picker" role="group" aria-label="Color theme" aria-keyshortcuts="Shift+D" title="Color theme (Shift+D)">
+<button type="button" data-theme-choice="system" aria-label="System theme" title="System theme (Shift+D to cycle)" aria-pressed="true"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><rect x="3" y="4" width="18" height="13" rx="1.5"/><path d="M8 21h8M12 17v4"/></svg></button>
+<button type="button" data-theme-choice="light" aria-label="Light theme" title="Light theme (Shift+D to cycle)" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><circle cx="12" cy="12" r="4"/><path d="M12 2v2m0 16v2M2 12h2m16 0h2M5 5l1.5 1.5m11 11L19 19M5 19l1.5-1.5m11-11L19 5"/></svg></button>
+<button type="button" data-theme-choice="dark" aria-label="Dark theme" title="Dark theme (Shift+D to cycle)" aria-pressed="false"><svg aria-hidden="true" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M20.5 13.2A8.5 8.5 0 0 1 10.8 3.5 8.5 8.5 0 1 0 20.5 13.2Z"/></svg></button>
+</div></div></header>
+<div class="archive-notice">Archived documentation · Version 8.5 is no longer maintained. <a href="https://docs.camunda.io/">Current Camunda docs ↗</a></div>
+<div class="layout"><aside class="sidebar" aria-label="Documentation"><details class="section-menu" open><summary title="Expand or collapse contents (Enter / Space)">Reference <span>Contents</span></summary><nav aria-label="Reference"><a href="../index.html">Reference</a><a href="../announcements/index.html">Announcements</a><details class="nav-group"><summary title="Expand or collapse (Enter / Space)">Release notes</summary><div><a href="../release-notes/index.html">Release notes</a><a href="../release-notes/850/index.html">8.5 Release notes</a></div></details><a href="../contact/index.html">Contact</a><a href="../auto-updates/index.html">Auto-updates</a><a href="../status/index.html">Camunda 8 SaaS status</a><a href="../supported-environments/index.html">Supported environments</a><a href="../dependencies/index.html">Dependencies</a><a href="../camunda-help-center/index.html">Access the Camunda Help Center</a><a href="../alpha-features/index.html">Alpha features</a><a href="../licenses/index.html">Licenses</a><a href="../notices/index.html">Security notices</a><a href="index.html" aria-current="page">Release policy</a><a href="../regions/index.html">Regions</a><a href="../saas-ip-addresses/index.html">Hostnames and IP addresses for Camunda connections</a><a href="../usage-metrics/index.html">Usage metrics</a><a href="../glossary/index.html">Glossary</a></nav></details></aside>
+<main id="main" tabindex="-1"><div class="article-meta"><span>Reference / 8.5</span><a class="original-link" href="https://unsupported.docs.camunda.io/8.5/docs/reference/release-policy/" target="_blank" rel="noopener noreferrer">Original page <span aria-hidden="true">↗</span></a></div><article class="markdown"><div class="theme-doc-markdown markdown"><header><h1>Release policy</h1></header><p>Camunda 8 follows the <a href="https://camunda.com/release-policy/" rel="noopener noreferrer" target="_blank">Camunda release policy</a> with the following specific clarifications.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>You can find deprecation and support announcements on the <a href="../announcements/index.html">Announcements</a> page.</p></div></div>
+<p><img alt="Stable and alpha channels when provisioning a cluster" class="img_ev3q" decoding="async" height="816" loading="lazy" src="../../../assets/media/6dc891305b0f1272cf457010.png" width="2000"/></p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="alpha-features-and-releases">Alpha features and releases</h2>
+<p>It is important to understand the different ways the term "alpha" is used in the context of Camunda releases and features.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="alpha-feature">Alpha feature</h3>
+<p>Refers to a feature or component released as an alpha version, in an early state for you to test and participate in development by sharing your feedback before the feature reaches <a href="../alpha-features/index.html#general-availability-ga">general availability (GA)</a>. Some alpha features require turning on for your cluster before you can use them. See <a href="../alpha-features/index.html">alpha features</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="alpha-release">Alpha release</h3>
+<p>Refers to a release made available between minor versions that allows you to preview an upcoming minor version and the alpha features included (for example, <code>8.5.0-alpha1</code>, <code>8.5.0-alpha2</code>, and so on). Camunda strives to release this type of release on a monthly basis. To learn more about the alpha features included in each alpha release, see <a href="../release-notes/index.html">release notes</a>.</p>
+<div class="theme-admonition theme-admonition-note admonition_xJq3 alert alert--secondary"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path d="M6.3 5.69a.942.942 0 0 1-.28-.7c0-.28.09-.52.28-.7.19-.18.42-.28.7-.28.28 0 .52.09.7.28.18.19.28.42.28.7 0 .28-.09.52-.28.7a1 1 0 0 1-.7.3c-.28 0-.52-.11-.7-.3zM8 7.99c-.02-.25-.11-.48-.31-.69-.2-.19-.42-.3-.69-.31H6c-.27.02-.48.13-.69.31-.2.2-.3.44-.31.69h1v3c.02.27.11.5.31.69.2.2.42.31.69.31h1c.27 0 .48-.11.69-.31.2-.19.3-.42.31-.69H8V7.98v.01zM7 2.3c-3.14 0-5.7 2.54-5.7 5.68 0 3.14 2.56 5.7 5.7 5.7s5.7-2.55 5.7-5.7c0-3.15-2.56-5.69-5.7-5.69v.01zM7 .98c3.86 0 7 3.14 7 7s-3.14 7-7 7-7-3.12-7-7 3.14-7 7-7z" fill-rule="evenodd"></path></svg></span>note</div><div class="admonitionContent_BuS1"><ul>
+<li>Alpha releases cannot be updated to newer releases and are not suitable for use in production.</li>
+<li>An alpha release can also be made available where the entire version is an alpha with <a href="../alpha-features/index.html#alpha">alpha limitations</a>.</li>
+<li>"Alpha channel" refers to the channel you can use when provisioning a SaaS cluster. See <a href="#alpha-channel">alpha channel</a>.</li>
+</ul></div></div>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="saas-provisioning">SaaS provisioning</h2>
+<p>In Camunda 8 SaaS we differentiate between components that are part of a Camunda 8 cluster (cluster components), and components outside the cluster (non-cluster components).</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="cluster-components">Cluster components</h3>
+<p>A cluster typically consists of the following components:</p>
+<ul>
+<li><a href="../../components/zeebe/zeebe-overview/index.html">Zeebe</a></li>
+<li><a href="../../components/operate/operate-introduction/index.html">Operate</a></li>
+<li><a href="../../components/tasklist/introduction-to-tasklist/index.html">Tasklist</a></li>
+<li><a href="../../components/optimize/what-is-optimize/index.html">Optimize</a></li>
+</ul>
+<p>You can provision cluster components using one of two channels, following the <a href="https://camunda.com/release-policy/" rel="noopener noreferrer" target="_blank">Camunda release policy</a>.</p>
+<p><img alt="Stable and alpha channels when provisioning a cluster" class="img_ev3q" decoding="async" height="226" loading="lazy" src="../../../assets/media/c6c96759f80b93978b5ec020.png" width="1044"/></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="stable-channel">Stable channel</h4>
+<p>You can use the <strong>Stable</strong> channel to access <a href="../alpha-features/index.html#general-availability-ga">general availability</a> features for cluster components.</p>
+<ul>
+<li>Provides the latest feature and patch releases ready for most users at minimal risk.</li>
+<li>Releases follow semantic versioning and can be updated to the next minor or patch release without data loss.</li>
+<li>On the stable channel, all supported minor versions are made available for provisioning.</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="alpha-channel">Alpha channel</h4>
+<p>You can use the <strong>Alpha</strong> channel to access <a href="../alpha-features/index.html">alpha features</a> and patch releases for cluster components.</p>
+<ul>
+<li>Provides alpha releases to preview and prepare for the next stable release.</li>
+<li>Alpha releases provide a short-term stability point to test new features and give feedback before they are released to the stable channel. Use an alpha release to test the upcoming minor release with your infrastructure.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="non-cluster-components">Non-cluster components</h3>
+<p>Non-cluster components include:</p>
+<ul>
+<li><a href="../../components/modeler/web-modeler/launch-web-modeler/index.html">Modeler (Web)</a></li>
+<li><a href="../../components/console/introduction-to-console/index.html">Connectors</a></li>
+<li><a href="../../components/console/introduction-to-console/index.html">Console</a></li>
+</ul>
+<p>Non-cluster component versions are released continuously.</p>
+<ul>
+<li>Customers are automatically updated to the latest component version when it is ready for release.</li>
+<li>Admins can <a href="../../components/console/manage-organization/enable-alpha-features/index.html">enable alpha features</a> for non-cluster components in organization settings.</li>
+</ul>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-camunda-8-versions">New Camunda 8 versions</h3>
+<p>When a new Camunda 8 version is released, we try to provide the new version on our managed service at the same time.</p>
+<p>An <strong>Update available</strong> notification is shown in Console, recommending that you update to the latest version.</p>
+<p><img alt="Console with notice to update the cluster in Camunda 8 SaaS" class="img_ev3q" decoding="async" height="416" loading="lazy" src="../../../assets/media/7ff8cbd2d42a92ef82827b74.png" width="1120"/></p>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="generation-names">Generation names</h4>
+<p>As of Camunda 8.5.0, the generation naming scheme in Camunda 8 SaaS changed to no longer include the patch version.</p>
+<ul>
+<li>
+<p>The naming scheme used for the Camunda 8.5 generations is <code>Camunda &lt;Major&gt;.&lt;Minor&gt;+gen&lt;N&gt;</code>, where <code>N</code> is incremented with every atomic change to the component version set.</p>
+</li>
+<li>
+<p>This decouples the generation name from the particular patch level of the components it contains, as some component versions such as Connectors are decoupled from other components.</p>
+</li>
+<li>
+<p>You can learn about the particular component patch version changes in the update dialogue to the latest generation available.</p>
+</li>
+</ul>
+<h4 class="anchor anchorWithStickyNavbar_LWe7" id="update-or-restart-for-critical-issues">Update or restart for critical issues</h4>
+<p>In our managed service, Camunda reserves the right to force update or restart a cluster immediately and without notice in advance if there is a critical security or stability issue.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="self-managed">Self-Managed</h2>
+<p>When a new Camunda 8 version is released, Camunda 8 Self-Managed enterprise customers are notified via email.</p>
+<div class="theme-admonition theme-admonition-info admonition_xJq3 alert alert--info"><div class="admonitionHeading_Gvgb"><span class="admonitionIcon_Rf37"><svg viewBox="0 0 14 16"><path d="M7 2.3c3.14 0 5.7 2.56 5.7 5.7s-2.56 5.7-5.7 5.7A5.71 5.71 0 0 1 1.3 8c0-3.14 2.56-5.7 5.7-5.7zM7 1C3.14 1 0 4.14 0 8s3.14 7 7 7 7-3.14 7-7-3.14-7-7-7zm1 3H6v5h2V4zm0 6H6v2h2v-2z" fill-rule="evenodd"></path></svg></span>info</div><div class="admonitionContent_BuS1"><p>Non-enterprise customers can stay up to date via <a href="https://camunda.com/blog/category/releases/" rel="noopener noreferrer" target="_blank">release blogs</a>, <a href="../announcements/index.html">announcements</a>, or releases on <a href="https://github.com/camunda" rel="noopener noreferrer" target="_blank">GitHub</a> and <a href="https://hub.docker.com/u/camunda" rel="noopener noreferrer" target="_blank">Docker Hub</a>.</p></div></div>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="helm-chart">Helm chart</h3>
+<p>Since the 8.4 release, the <a href="https://artifacthub.io/packages/helm/camunda/camunda-platform" rel="noopener noreferrer" target="_blank">Camunda 8 Self-Managed Helm chart</a> version is decoupled from the version of the application. For example, the chart version is 9.0.0 and the application version is 8.4.x.</p>
+<p>To learn more about the applications version included in the Helm chart, see the <a href="https://helm.camunda.io/camunda-platform/version-matrix/" rel="noopener noreferrer" target="_blank">Camunda 8 Helm chart version matrix</a>.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="new-camunda-8-versions-1">New Camunda 8 versions</h3>
+<p>If you are running Camunda 8 Self-Managed, see the <a href="../../self-managed/operational-guides/update-guide/introduction/index.html">update guide</a> to learn how to update your Camunda 8 application or server installation to a newer version of Camunda 8.</p>
+<h2 class="anchor anchorWithStickyNavbar_LWe7" id="dependency-maintenance-policies">Dependency maintenance policies</h2>
+<p>Camunda provides <a href="https://camunda.com/release-policy/" rel="noopener noreferrer" target="_blank">a standard support policy</a> of 18 months for a particular minor version from the date it is released.
+During this time, patches are regularly released containing security and bug fixes, some of which may come from dependency updates. Therefore, for the
+vast majority of dependencies Camunda <em>only</em> applies patch updates.</p>
+<p>However, certain dependencies used by Camunda 8 may have a shorter maintenance policy than Camunda itself. Camunda may adopt a different update policy for these dependencies, as listed below.</p>
+<h3 class="anchor anchorWithStickyNavbar_LWe7" id="spring">Spring</h3>
+<p><strong>Zeebe</strong> is a Spring Boot application and leverage Spring Boot to execute fundamental functionality such as application configuration, REST infrastructure (including security), production ready features, etc.</p>
+<p>However, Spring Boot has a shorter maintenance window than Camunda for its open-source software (OSS) offering. <a href="https://spring.io/projects/spring-boot#support" rel="noopener noreferrer" target="_blank">Versions are only supported for 13 months</a>, versus Camunda's 18 months. To circumvent this, <strong>Zeebe</strong> patch releases also update Spring Boot minor versions, such that the latest patch release of these components uses a supported Spring version.</p>
+<p>As for libraries and SDKs meant to be included in third-party applications, Camunda follows a best effort policy to balance compatibility and secure Spring-dependent libraries.</p></div></article><nav class="pagination" aria-label="Adjacent pages"><a href="../notices/index.html">Previous Security notices</a><a href="../regions/index.html">Next Regions</a></nav><footer>Documentation © Camunda. Independent archive; presentation modified. <a href="../../../LICENSE.txt">License</a><a href="../../../archive-report.json">Archive details</a></footer></main>
+<aside class="page-toc" aria-label="On this page"><h2>On this page</h2><a class="toc-h2" href="#alpha-features-and-releases">Alpha features and releases</a><a class="toc-h3" href="#alpha-feature">Alpha feature</a><a class="toc-h3" href="#alpha-release">Alpha release</a><a class="toc-h2" href="#saas-provisioning">SaaS provisioning</a><a class="toc-h3" href="#cluster-components">Cluster components</a><a class="toc-h3" href="#non-cluster-components">Non-cluster components</a><a class="toc-h3" href="#new-camunda-8-versions">New Camunda 8 versions</a><a class="toc-h2" href="#self-managed">Self-Managed</a><a class="toc-h3" href="#helm-chart">Helm chart</a><a class="toc-h3" href="#new-camunda-8-versions-1">New Camunda 8 versions</a><a class="toc-h2" href="#dependency-maintenance-policies">Dependency maintenance policies</a><a class="toc-h3" href="#spring">Spring</a></aside></div>
+<dialog id="search-dialog" aria-labelledby="search-title"><div class="search-heading"><h2 id="search-title">Search documentation</h2><button id="close-search" type="button" aria-keyshortcuts="Escape" title="Close search (Esc)">Close <kbd>Esc</kbd></button></div>
+<label class="sr-only" for="search-input">Search all Camunda 8.5 documentation</label><input id="search-input" type="search" placeholder="Search a topic, component, or phrase…" autocomplete="off" spellcheck="false">
+<p id="search-status" role="status">Type to search all archived pages.</p><div id="search-results"></div></dialog></body></html>
